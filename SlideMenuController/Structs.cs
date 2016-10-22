@@ -1,7 +1,6 @@
 ﻿using System;
 using UIKit;
 using CoreGraphics;
-using Foundation;
 
 
 namespace SlideMenuControllerXamarin

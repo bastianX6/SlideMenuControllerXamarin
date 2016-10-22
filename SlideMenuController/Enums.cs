@@ -1,4 +1,4 @@
-﻿using System;
+﻿
 namespace SlideMenuControllerXamarin
 {
 	public enum SlideAction

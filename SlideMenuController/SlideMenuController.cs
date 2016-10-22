@@ -1,7 +1,6 @@
 ﻿using System;
 using UIKit;
 using CoreGraphics;
-using Foundation;
 
 namespace SlideMenuControllerXamarin
 {
@@ -647,8 +646,8 @@ namespace SlideMenuControllerXamarin
 			UIView.Animate(duration, 0.0f, 0, 
 			               () => {
 
-							   this.LeftContainerView.Frame = frame;
-							   this.OpacityView.Layer.Opacity = (float) SlideMenuOptions.ContentViewOpacity;
+							   LeftContainerView.Frame = frame;
+							   OpacityView.Layer.Opacity = (float) SlideMenuOptions.ContentViewOpacity;
 
 							   if (SlideMenuOptions.ContentViewDrag == true)
 							   {
@@ -694,8 +693,8 @@ namespace SlideMenuControllerXamarin
 						   () =>
 						   {
 
-							   this.RightContainerView.Frame = frame;
-							   this.OpacityView.Layer.Opacity = (float)SlideMenuOptions.ContentViewOpacity;
+							   RightContainerView.Frame = frame;
+							   OpacityView.Layer.Opacity = (float)SlideMenuOptions.ContentViewOpacity;
 
 							   if (SlideMenuOptions.ContentViewDrag == true)
 							   {
@@ -742,8 +741,8 @@ namespace SlideMenuControllerXamarin
 						   () =>
 						   {
 
-							   this.LeftContainerView.Frame = frame;
-							   this.OpacityView.Layer.Opacity = 0;
+							   LeftContainerView.Frame = frame;
+							   OpacityView.Layer.Opacity = 0;
 
 							   MainContainerView.Transform = CGAffineTransform.MakeScale(1, 1);
 						   },
@@ -784,8 +783,8 @@ namespace SlideMenuControllerXamarin
 					 () =>
 					 {
 
-						 this.RightContainerView.Frame = frame;
-						 this.OpacityView.Layer.Opacity = 0;
+						 RightContainerView.Frame = frame;
+						 OpacityView.Layer.Opacity = 0;
 
 						 MainContainerView.Transform = CGAffineTransform.MakeScale(1, 1);
 					 },
