@@ -5,12 +5,15 @@ using SlideMenuControllerXamarin;
 
 namespace SlideMenuControllerExample
 {
-	public partial class ViewController : UIViewController
+	public partial class ViewController2 : UIViewController
 	{
-
-		protected ViewController(IntPtr handle) : base(handle)
+		protected ViewController2(IntPtr handle) : base(handle)
 		{
 			// Note: this .ctor should not contain any initialization logic.
+		}
+
+		public ViewController2() : base("ViewController2", null)
+		{
 		}
 
 		public override void ViewDidLoad()
@@ -25,7 +28,6 @@ namespace SlideMenuControllerExample
 			base.DidReceiveMemoryWarning();
 			// Release any cached data, images, etc that aren't in use.
 		}
-
-	
 	}
 }
+

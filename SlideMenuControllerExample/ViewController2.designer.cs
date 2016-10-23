@@ -11,8 +11,8 @@ using UIKit;
 
 namespace SlideMenuControllerExample
 {
-    [Register ("ViewController")]
-    partial class ViewController
+    [Register ("ViewController2")]
+    partial class ViewController2
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]

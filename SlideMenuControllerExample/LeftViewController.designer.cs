@@ -11,19 +11,11 @@ using UIKit;
 
 namespace SlideMenuControllerExample
 {
-    [Register ("ViewController")]
-    partial class ViewController
+    [Register ("LeftViewController")]
+    partial class LeftViewController
     {
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UILabel TextLabel { get; set; }
-
         void ReleaseDesignerOutlets ()
         {
-            if (TextLabel != null) {
-                TextLabel.Dispose ();
-                TextLabel = null;
-            }
         }
     }
 }

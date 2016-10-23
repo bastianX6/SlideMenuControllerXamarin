@@ -237,7 +237,7 @@ namespace SlideMenuControllerXamarin
 
 				SetOpenWindowLevel();
 				RightViewController.BeginAppearanceTransition(IsRightHidden(), true);
-				OpenLeftWithVelocity(0.0f);
+				OpenRightWithVelocity(0.0f);
 				Track(TrackAction.RightTapOpen);
 			}
 		}

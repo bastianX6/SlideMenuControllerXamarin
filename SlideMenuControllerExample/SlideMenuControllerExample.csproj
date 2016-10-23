@@ -115,6 +115,18 @@
     <Compile Include="ViewController.designer.cs">
       <DependentUpon>ViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="LeftViewController.cs" />
+    <Compile Include="LeftViewController.designer.cs">
+      <DependentUpon>LeftViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController2.cs" />
+    <Compile Include="ViewController2.designer.cs">
+      <DependentUpon>ViewController2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController3.cs" />
+    <Compile Include="ViewController3.designer.cs">
+      <DependentUpon>ViewController3.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SlideMenuController\SlideMenuControllerXamarin.csproj">

@@ -29,7 +29,7 @@ namespace SlideMenuControllerXamarin
 		}
 
 
-		public static void AddrightBarButtonWithImage(this UIViewController controller, UIImage image)
+		public static void AddRightBarButtonWithImage(this UIViewController controller, UIImage image)
 		{
 			UIBarButtonItem rightBarButton = new UIBarButtonItem(image, UIBarButtonItemStyle.Plain, (object sender, EventArgs e) =>
 			{
