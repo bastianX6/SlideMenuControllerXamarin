@@ -1,6 +1,8 @@
 # SlideMenuControllerXamarin
 Slide menu for Xamarin iOS. Based in [SlideMenuControllerSwift](https://github.com/dekatotoro/SlideMenuControllerSwift), created by [Yuji Hato](https://github.com/dekatotoro) 
 
+![example](example.gif)
+
 ##Installation
 Install SlideMenuControllerXamarin from [NuGet](https://www.nuget.org/packages/SlideMenuControllerXamarin)
 
