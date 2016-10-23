@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 // Change them to the values specific to your project.
 
 [assembly: AssemblyTitle("SlideMenuController")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("iOS Slide Menu View based on Google+, iQON, Feedly, Ameba iOS app. Xamarin iOS version of SlideMenuControllerSwift")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("")]

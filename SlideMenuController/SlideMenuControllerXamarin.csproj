@@ -9,6 +9,8 @@
     <RootNamespace>SlideMenuController</RootNamespace>
     <AssemblyName>SlideMenuController</AssemblyName>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <ReleaseVersion>1.0.0</ReleaseVersion>
+    <Description>iOS Slide Menu View based on Google+, iQON, Feedly, Ameba iOS app. Xamarin iOS version of SlideMenuControllerSwift</Description>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>

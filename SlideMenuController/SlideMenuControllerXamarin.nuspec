@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>SlideMenuControllerXamarin</id>
+    <version>1.0.0</version>
+    <title>SlideMenuControllerXamarin</title>
+    <authors>Bastian Veliz</authors>
+    <owners>Bastian Veliz</owners>
+    <licenseUrl>https://github.com/bastianX6/SlideMenuControllerXamarin/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/bastianX6/SlideMenuControllerXamarin</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>iOS Slide Menu View based on Google+, iQON, Feedly, Ameba iOS app. Xamarin iOS version of SlideMenuControllerSwift</description>
+    <releaseNotes>Initial release</releaseNotes>
+    <copyright>Copyright 2016</copyright>
+    <tags>SlideMenu MasterView SlideMenuController</tags>
+  </metadata>
+  <files>
+    <file src="bin/Release/*.dll" target="lib/Xamarin.iOS10" />
+  </files>
+</package>
