@@ -649,11 +649,11 @@ namespace SlideMenuControllerXamarin
 							   LeftContainerView.Frame = frame;
 							   OpacityView.Layer.Opacity = (float) SlideMenuOptions.ContentViewOpacity;
 
-							   if (SlideMenuOptions.ContentViewDrag == true)
+								if (SlideMenuOptions.AnimationType == SlideAnimation.ContentViewDrag)
 							   {
 								   MainContainerView.Transform = CGAffineTransform.MakeTranslation(SlideMenuOptions.LeftViewWidth, 0);
 							   }
-							   else
+							   else if (SlideMenuOptions.AnimationType == SlideAnimation.MakeScale)
 							   {
 								   MainContainerView.Transform = CGAffineTransform.MakeScale(SlideMenuOptions.ContentViewScale, SlideMenuOptions.ContentViewScale);
 								}
@@ -696,11 +696,11 @@ namespace SlideMenuControllerXamarin
 							   RightContainerView.Frame = frame;
 							   OpacityView.Layer.Opacity = (float)SlideMenuOptions.ContentViewOpacity;
 
-							   if (SlideMenuOptions.ContentViewDrag == true)
+							   if (SlideMenuOptions.AnimationType == SlideAnimation.ContentViewDrag)
 							   {
 								   MainContainerView.Transform = CGAffineTransform.MakeTranslation(-SlideMenuOptions.RightViewWidth, 0);
 							   }
-							   else
+							   else if (SlideMenuOptions.AnimationType == SlideAnimation.MakeScale)
 							   {
 								   MainContainerView.Transform = CGAffineTransform.MakeScale(SlideMenuOptions.ContentViewScale, SlideMenuOptions.ContentViewScale);
 							   }
@@ -743,8 +743,11 @@ namespace SlideMenuControllerXamarin
 
 							   LeftContainerView.Frame = frame;
 							   OpacityView.Layer.Opacity = 0;
-
-							   MainContainerView.Transform = CGAffineTransform.MakeScale(1, 1);
+							   if (SlideMenuOptions.AnimationType == SlideAnimation.MakeScale)
+							   { 
+									MainContainerView.Transform = CGAffineTransform.MakeScale(1, 1);
+								}
+							   
 						   },
 						   () =>
 						   {
@@ -786,7 +789,10 @@ namespace SlideMenuControllerXamarin
 						 RightContainerView.Frame = frame;
 						 OpacityView.Layer.Opacity = 0;
 
-						 MainContainerView.Transform = CGAffineTransform.MakeScale(1, 1);
+						 if (SlideMenuOptions.AnimationType == SlideAnimation.MakeScale)
+						 {
+							 MainContainerView.Transform = CGAffineTransform.MakeScale(1, 1);
+						 }
 					 },
 					 () =>
 					 {
@@ -807,7 +813,7 @@ namespace SlideMenuControllerXamarin
 
 		// Change Left/Right/Main controller -----------------------------------------------------------------
 
-		public void ChangueMainViewcontroller(UIViewController mainViewcontroller, bool close)
+		public void ChangeMainViewcontroller(UIViewController mainViewcontroller, bool close)
 		{
 			RemoveViewController(MainViewController);
 			MainViewController = mainViewcontroller;
@@ -822,7 +828,7 @@ namespace SlideMenuControllerXamarin
 		}
 
 
-		public void ChangueLeftViewcontroller(UIViewController LeftViewcontroller, bool close)
+		public void ChangeLeftViewcontroller(UIViewController LeftViewcontroller, bool close)
 		{
 			RemoveViewController(LeftViewController);
 			LeftViewController = LeftViewcontroller;
@@ -864,7 +870,7 @@ namespace SlideMenuControllerXamarin
 			RightContainerView.Frame = RightFrame;
 		}
 
-		public void ChangueRightViewcontroller(UIViewController rightViewcontroller, bool close)
+		public void ChangeRightViewcontroller(UIViewController rightViewcontroller, bool close)
 		{
 			RemoveViewController(RightViewController);
 			RightViewController = rightViewcontroller;
@@ -1013,11 +1019,11 @@ namespace SlideMenuControllerXamarin
 			nfloat scale = 1.0f - ((1.0f - SlideMenuOptions.ContentViewScale) * openedLeftRatio);
 			nfloat drag = SlideMenuOptions.LeftViewWidth + LeftContainerView.Frame.X;
 
-			if (SlideMenuOptions.ContentViewDrag == true)
+			if (SlideMenuOptions.AnimationType == SlideAnimation.ContentViewDrag)
 			{
 				MainContainerView.Transform = CGAffineTransform.MakeTranslation(drag, 0);
 			}
-			else
+			else if (SlideMenuOptions.AnimationType == SlideAnimation.MakeScale)
 			{
 				MainContainerView.Transform = CGAffineTransform.MakeScale(scale, scale);
 			}
@@ -1030,11 +1036,11 @@ namespace SlideMenuControllerXamarin
 			nfloat scale = 1.0f - ((1.0f - SlideMenuOptions.ContentViewScale) * openedRightRatio);
 			nfloat drag = RightContainerView.Frame.X - MainContainerView.Frame.Size.Width;
 
-			if (SlideMenuOptions.ContentViewDrag == true)
+			if (SlideMenuOptions.AnimationType == SlideAnimation.ContentViewDrag)
 			{
 				MainContainerView.Transform = CGAffineTransform.MakeTranslation(drag, 0);
 			}
-			else
+			else if (SlideMenuOptions.AnimationType == SlideAnimation.MakeScale)
 			{
 				MainContainerView.Transform = CGAffineTransform.MakeScale(scale, scale);
 			}
@@ -1135,7 +1141,11 @@ namespace SlideMenuControllerXamarin
 			frame.X = finalXOrigin;
 			LeftContainerView.Frame = frame;
 			OpacityView.Layer.Opacity = 0.0f;
-			MainContainerView.Transform = CGAffineTransform.MakeScale(1.0f, 1.0f);
+			if (SlideMenuOptions.AnimationType == SlideAnimation.MakeScale)
+			{ 
+				MainContainerView.Transform = CGAffineTransform.MakeScale(1.0f, 1.0f);
+			}
+
 			RemoveShadow(LeftContainerView);
 			EnableContentInteraction();
 		}
@@ -1148,7 +1158,11 @@ namespace SlideMenuControllerXamarin
 			frame.X = finalXOrigin;
 			RightContainerView.Frame = frame;
 			OpacityView.Layer.Opacity = 0.0f;
-			MainContainerView.Transform = CGAffineTransform.MakeScale(1.0f, 1.0f);
+			if (SlideMenuOptions.AnimationType == SlideAnimation.MakeScale)
+			{ 
+				MainContainerView.Transform = CGAffineTransform.MakeScale(1.0f, 1.0f);
+			}
+
 			RemoveShadow(RightContainerView);
 			EnableContentInteraction();
 		}

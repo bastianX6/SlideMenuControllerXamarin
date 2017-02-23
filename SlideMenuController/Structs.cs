@@ -12,7 +12,7 @@ namespace SlideMenuControllerXamarin
 		public static nfloat LeftBezelWidth = 16.0f;
 		public static nfloat ContentViewScale = 0.96f;
 		public static nfloat ContentViewOpacity = 0.5f;
-		public static bool ContentViewDrag = false;
+		public static SlideAnimation AnimationType = SlideAnimation.ContentViewDrag;
 		public static nfloat ShadowOpacity = 0.0f;
 		public static nfloat ShadowRadius = 0.0f;
 		public static CGSize ShadowOffset = new CGSize(0, 0);
@@ -51,5 +51,9 @@ namespace SlideMenuControllerXamarin
 		public SlideAction action;
 		public bool ShouldBounce;
 		public nfloat Velocity;
+	}
+
+	public enum SlideAnimation { 
+		ContentViewDrag, MakeScale, None
 	}
 }
