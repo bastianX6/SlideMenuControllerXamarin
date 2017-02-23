@@ -34,6 +34,15 @@ namespace SlideMenuControllerXamarin
 		public UITapGestureRecognizer LeftTapGesture;
 		public UITapGestureRecognizer RightTapGesture;
 
+		public SlideAnimation AnimationType { 
+			get {
+				return SlideMenuOptions.AnimationType;
+			}
+			set {
+				SlideMenuOptions.AnimationType = value;
+			}
+		}
+
 
 		public SlideMenuController(IntPtr handle) : base(handle)
 		{

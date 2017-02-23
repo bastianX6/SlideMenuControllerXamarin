@@ -33,8 +33,8 @@ namespace SlideMenuControllerExample
 			var rootController = mainController.ViewControllers[0];
 			rootController.AddLeftBarButtonWithImage(UIImage.FromBundle("menu"));
 
-			SlideMenuOptions.AnimationType = SlideAnimation.None;
 			slideMenuController = new SlideMenuController(mainController, leftController, rightController);
+			slideMenuController.AnimationType = SlideAnimation.Default;
 			Window.RootViewController = slideMenuController;
 			Window.MakeKeyAndVisible();
 
